@@ -1,0 +1,15 @@
+/* src/index.css */
+
+/* Remove all default margins and padding */
+body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh; /* Make sure it takes full viewport height */
+}
+
+/* Ensure the root div also takes up full height */
+#root {
+  display: flex;
+  flex-direction: column;
+}
