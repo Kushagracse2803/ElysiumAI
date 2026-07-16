@@ -1,0 +1,26 @@
+# Ignore Virtual Environment
+venv/
+.venv/
+Env/
+
+# Ignore Python cache and logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.log
+
+# Ignore Heavy Model Weights, Checkpoints, and Large Datasets
+# (This matches folders like 'model_weights', 'gpt_weights', '.bin', '.safetensors', etc.)
+*weights*/
+*checkpoint*/
+*.bin
+*.pkl
+*.pth
+*.pt
+*.safetensors
+*.onnx
+
+# Ignore local environment variables / secrets
+.env
