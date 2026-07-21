@@ -1,21 +1,10 @@
 import os
-import time
 from dotenv import load_dotenv
 import google.generativeai as genai
 
+
 # --------------------------
 # Load & Configure API Key
-# --------------------------
-load_dotenv()
-api_key = os.getenv("GEMINI_KEY") or os.getenv("GEMINI_API_KEY")
-
-if not api_key:
-    raise ValueError(" GEMINI_KEY not found in .env file")
-
-genai.configure(api_key=api_key)
-
-# --------------------------
-# 🎬 Generate Text-to-Video (Fallback Safe)
 # --------------------------
 def run(prompt_text: str):
     """
@@ -24,10 +13,14 @@ def run(prompt_text: str):
     """
     print(f"[🎬 ELYSIUM] Prompt received: {prompt_text}")
 
+    load_dotenv()
+    api_key = os.getenv("GEMINI_KEY") or os.getenv("GEMINI_API_KEY")
+
+    if not api_key:
+        return "⚠️ Gemini API key is not configured. Add GEMINI_KEY or GEMINI_API_KEY to your environment to enable video generation."
+
     try:
-        # --------------------------
-        # ✅ Gemini 2.5 Text Fallback
-        # --------------------------
+        genai.configure(api_key=api_key)
         model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(
             f"Create a cinematic short film concept or video script for this idea: {prompt_text}"
