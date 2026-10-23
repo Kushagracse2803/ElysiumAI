@@ -8,8 +8,7 @@
 [![GitHub Repo](https://img.shields.io/badge/GitHub-ElysiumAI-181717?logo=github)](https://github.com/Kushagracse2803/ElysiumAI)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://lnkd.in/p/d4f-T3X9)
 
-
-![Elysium AI Screenshot](docs/screenshot.png)
+![Elysium AI Screenshot](Project_ScreenShot.png)
 
 </div>
 
@@ -143,10 +142,9 @@ ElysiumAI/
 ├── backend/                          # Flask gateway: smart router, model integrations, API
 │   └── app.py                        # Intent detection, routing and request handling
 ├── frontend/                         # React + Vite + Tailwind user interface
-├── docs/
-│   └── screenshot.png                # README screenshot
 ├── EllysiumAI_report.pdf             # Full B.Tech project report
 ├── ElysiumAI_Final_Year_Project.pptx # Project presentation slides
+├── Project_ScreenShot.png            # README screenshot
 ├── .gitignore
 └── README.md
 ```
@@ -160,7 +158,6 @@ ElysiumAI/
 - [ ] Mobile app (Android / iOS) with on-device AI
 - [ ] Real video generation from text
 - [ ] Enterprise tier: team workspaces, SSO, on-prem deployment
-
 
 ## 🤝 Contributing
 
